@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+message Request {
+  string username = 1;
+  string name = 2;
+}
+
+message Response { 
+  string status = 1; 
+}
+
+service AddService {
+  rpc AddtoKafka(Request) returns (Response);
+  
+}
